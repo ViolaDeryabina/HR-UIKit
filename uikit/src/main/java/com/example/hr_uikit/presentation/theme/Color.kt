@@ -12,4 +12,4 @@ val White = Color(0xFFFFFFFF)
 val Text = Color(0xFF191B23)
 val Background = Color(0xFFFAF8FF)
 val Border = Color(0xFFC3C6D7)
-//C3C6D7
+//C3C6D7//505F76//D0E1FB

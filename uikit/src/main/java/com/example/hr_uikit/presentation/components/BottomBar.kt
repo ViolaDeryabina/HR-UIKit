@@ -1,5 +1,6 @@
 package com.example.hr_uikit.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,12 +25,16 @@ import com.example.hr_uikit.presentation.theme.CustomTheme
 import com.example.hr_uikit.presentation.theme.Primary
 import com.example.hr_uikit.presentation.theme.White
 
-
+// Назначение: Создание элемента BottomBar для навигации
+// Автор: Дерябина В.Н.
+// Дата создания 13-05-2026
 @Composable
 fun BottomBar(
     modifier: Modifier = Modifier,
     selected: Int
 ) {
+    Log.i("[BottomBar]", "Создание - Отрисовка BottomBar")
+
     Row(
         modifier = modifier
             .background(White)

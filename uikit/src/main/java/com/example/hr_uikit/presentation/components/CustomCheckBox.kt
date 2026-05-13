@@ -1,7 +1,7 @@
 package com.example.hr_uikit.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Checkbox
@@ -15,13 +15,18 @@ import com.example.hr_uikit.presentation.theme.CustomTheme
 import com.example.hr_uikit.presentation.theme.Primary
 import com.example.hr_uikit.presentation.theme.White
 
+// Назначение: Создание элемента CustomCheckBox для согласия или отказа
+// Автор: Дерябина В.Н.
+// Дата создания 13-05-2026
 @Composable
 fun CustomCheckBox(
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
-    enabled: Boolean=false
+    enabled: Boolean = false
 ) {
+    Log.i("[CustomCheckBox]", "Создание - Отрисовка CustomCheckBox")
+
     Checkbox(
         modifier = modifier,
         checked = checked,
@@ -31,7 +36,7 @@ fun CustomCheckBox(
             checkmarkColor = White,
             uncheckedColor = Color(0xFF737686),
             disabledUncheckedColor = Border,
-            disabledCheckedColor =Color(0xFFEDEDF9),
+            disabledCheckedColor = Color(0xFFEDEDF9),
             disabledIndeterminateColor = Color(0xFFEDEDF9),
         ),
         enabled = enabled
@@ -41,8 +46,10 @@ fun CustomCheckBox(
 @Preview
 @Composable
 private fun CustomCheckBoxPrev() {
-    CustomTheme{
-        Column(modifier = Modifier.fillMaxSize().background(White )){
+    CustomTheme {
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .background(White)) {
             CustomCheckBox(checked = true, onCheckedChange = {})
             CustomCheckBox(checked = false, onCheckedChange = {})
         }

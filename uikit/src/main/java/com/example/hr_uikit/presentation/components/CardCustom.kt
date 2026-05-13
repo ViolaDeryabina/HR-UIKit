@@ -1,5 +1,6 @@
 package com.example.hr_uikit.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -25,24 +26,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.hr_uikit.R
+import com.example.hr_uikit.data.CardCustom
 import com.example.hr_uikit.presentation.theme.CustomTheme
 import com.example.hr_uikit.presentation.theme.Secondary
 import com.example.hr_uikit.presentation.theme.Text
 import com.example.hr_uikit.presentation.theme.White
 
-data class DataCardCustom(
-    val textTitle: String,
-    val category: String,
-    val time: String,
-    val status: String,
-    val money: String,
-    val people: Int
-)
-
+// Назначение: Создание элемента CardCustom для просмотра информации
+// Автор: Дерябина В.Н.
+// Дата создания 13-05-2026
 @Composable
 fun CardCustom(
     modifier: Modifier = Modifier,
-    information: DataCardCustom = DataCardCustom(
+    information: CardCustom = CardCustom(
         textTitle = "Senior Product Designer",
         category = "Product Team",
         time = "Full-time",
@@ -53,6 +49,8 @@ fun CardCustom(
     background: Color = Color(0xFFD0E1FB),
 
     ) {
+    Log.i("[CardCustom]", "Создание - Отрисовка CardCustom")
+
     Card(
         modifier = modifier,
         colors = CardColors(

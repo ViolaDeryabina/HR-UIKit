@@ -1,4 +1,4 @@
-package com.example.hr_uikit.presentation.comninents
+package com.example.hr_uikit.presentation.components
 
 import android.util.Log
 import androidx.compose.foundation.BorderStroke
@@ -8,43 +8,44 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.hr_uikit.presentation.theme.CustomTheme
-import com.example.hr_uikit.presentation.theme.Error
 import com.example.hr_uikit.presentation.theme.Primary
 import com.example.hr_uikit.presentation.theme.White
 
-// Назначение: Создание кнопки DestructiveSolidButton для обработки нажатий
+// Назначение: Создание кнопки SecondaryButton для обработки нажатий
 // Автор: Дерябина В.Н.
 // Дата создания 13-05-2026
 @Composable
-fun DestructiveSolidButton(
+fun SecondaryButton(
     modifier: Modifier = Modifier,
-    onClick: () -> Unit,
+    onClick:()-> Unit,
     text: String,
     enabled: Boolean
 ) {
-    Log.i("[DestructiveSolidButton]", "Создание - Отрисовка кнопки")
+    Log.i("[SecondaryButton]","Создание - Отрисовка кнопки")
     MainButton(
         onClick = onClick,
         text = text,
         modifier = modifier,
         enabled = enabled,
         colors = ButtonColors(
-            containerColor = Error,
-            contentColor = White,
-            disabledContentColor = Error,
+            containerColor = White,
+            contentColor = Primary,
+            disabledContentColor = Primary,
             disabledContainerColor = White
-        )
+        ),
+        border = BorderStroke(2.dp, Primary),
+        color = Primary
     )
 }
 
 @Preview
 @Composable
-private fun DestructiveSolidButtonPrev() {
+private fun SecondaryButtonPrev() {
     CustomTheme {
-        DestructiveSolidButton(
+        SecondaryButton(
             onClick = {},
             text = "TExt",
-            enabled = true)
-
+            enabled = true
+        )
     }
 }

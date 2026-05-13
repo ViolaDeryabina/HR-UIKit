@@ -1,10 +1,8 @@
-package com.example.hr_uikit.presentation.comninents
+package com.example.hr_uikit.presentation.components
 
 import android.util.Log
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
@@ -17,7 +15,6 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.hr_uikit.presentation.theme.CustomTheme
-import com.example.hr_uikit.presentation.theme.Error
 import com.example.hr_uikit.presentation.theme.Primary
 import com.example.hr_uikit.presentation.theme.Text
 import com.example.hr_uikit.presentation.theme.White

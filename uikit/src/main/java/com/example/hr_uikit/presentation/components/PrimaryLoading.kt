@@ -1,4 +1,4 @@
-package com.example.hr_uikit.presentation.comninents
+package com.example.hr_uikit.presentation.components
 
 import android.util.Log
 import androidx.compose.runtime.Composable
@@ -6,34 +6,33 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.hr_uikit.presentation.theme.CustomTheme
 
-// Назначение: Создание кнопки PrimaryButton для обработки нажатий
+// Назначение: Создание кнопки PrimaryLoading для обработки нажатий
 // Автор: Дерябина В.Н.
 // Дата создания 13-05-2026
 @Composable
-fun PrimaryButton(
+fun PrimaryLoading(
     modifier: Modifier = Modifier,
     onClick:()-> Unit,
     text: String,
     enabled: Boolean
 ) {
-    Log.i("[PrimaryButton]","Создание - Отрисовка кнопки")
+    Log.i("[PrimaryLoading]","Создание - Отрисовка кнопки")
 
     MainButton(
         onClick = onClick,
         text = text,
         modifier = modifier,
-        enabled = enabled
+        enabled = enabled,
+        loading = true
     )
 }
 
 @Preview
 @Composable
-private fun PrimaryButtonPrev() {
+private fun PrimaryLoadingPrev() {
     CustomTheme{
-        PrimaryButton(
-            onClick = {},
+        PrimaryLoading(onClick = {},
             text = "TExt",
-            enabled = true
-        )
+            enabled = true)
     }
 }

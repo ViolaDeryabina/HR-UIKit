@@ -1,5 +1,6 @@
-package com.example.hr_uikit.presentation.comninents
+package com.example.hr_uikit.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.OutlinedTextField
@@ -17,6 +18,9 @@ import com.example.hr_uikit.presentation.theme.Error
 import com.example.hr_uikit.presentation.theme.Primary
 import com.example.hr_uikit.presentation.theme.Text
 
+// Назначение: Создание элемента Input для ввода информации
+// Автор: Дерябина В.Н.
+// Дата создания 13-05-2026
 @Composable
 fun Input(
     value: String,
@@ -29,6 +33,7 @@ fun Input(
     textString: String = "",
     textColor: Color= Text
     ) {
+    Log.i("[Input]", "Создание - Отрисовка инпута")
     Column() {
         if (textString.isNotEmpty()) {
             Text(

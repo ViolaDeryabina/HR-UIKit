@@ -18,6 +18,7 @@ import androidx.compose.material3.CardColors
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -26,7 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.hr_uikit.R
-import com.example.hr_uikit.data.CardCustom
+import com.example.hr_uikit.presentation.model.CardCustom
 import com.example.hr_uikit.presentation.theme.CustomTheme
 import com.example.hr_uikit.presentation.theme.Secondary
 import com.example.hr_uikit.presentation.theme.Text
@@ -65,7 +66,7 @@ fun CardCustom(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Column() {
+                Column(modifier = Modifier.weight(0.6f)) {
                     Text(
                         text = information.textTitle,
                         style = CustomTheme.typography.ScreenHeader24px,
@@ -80,9 +81,10 @@ fun CardCustom(
                     }
                 }
                 Box(
-                    modifier = Modifier
+                    modifier = Modifier.weight(0.15f)
                         .background(background, CircleShape)
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
+                        .padding(horizontal = 12.dp, vertical = 4.dp),
+                    contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = information.status,

@@ -3,6 +3,7 @@ package com.example.hr_uikit.presentation.components
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -21,15 +22,15 @@ import com.example.hr_uikit.presentation.theme.Primary
 // Автор: Дерябина В.Н.
 // Дата создания 13-05-2026
 @Composable
-fun Pagination(currentPageIndex: Int, modifier: Modifier = Modifier) {
+fun Pagination(currentPageIndex: Int, modifier: Modifier = Modifier, progress: Boolean=false) {
     Log.i("[Pagination]", "Создание - Отрисовка Pagination")
     Row() {
         repeat(3) { iteration ->
             val color =
                 if (currentPageIndex == iteration) Primary
-                else if (currentPageIndex + 1 == iteration) Primary.copy(
+                else if (currentPageIndex + 1 == iteration && progress) Primary.copy(
                     0.5f
-                ) else Color(0xFFE1E2ED)
+                )else if(currentPageIndex > iteration && progress)Primary else Color(0xFFE1E2ED)
             Box(
                 modifier = modifier
                     .weight(1f)
@@ -47,6 +48,10 @@ fun Pagination(currentPageIndex: Int, modifier: Modifier = Modifier) {
 @Composable
 private fun PaginationPrev() {
     CustomTheme {
-        Pagination(currentPageIndex = 0)
+        Column() {
+            Pagination(currentPageIndex = 0)
+            Pagination(currentPageIndex = 1)
+            Pagination(currentPageIndex = 2)
+        }
     }
 }

@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.hr_uikit.R
-import com.example.hr_uikit.data.BottomBar
+import com.example.hr_uikit.presentation.model.BottomBar
 import com.example.hr_uikit.presentation.theme.Border
 import com.example.hr_uikit.presentation.theme.CustomTheme
 import com.example.hr_uikit.presentation.theme.Primary

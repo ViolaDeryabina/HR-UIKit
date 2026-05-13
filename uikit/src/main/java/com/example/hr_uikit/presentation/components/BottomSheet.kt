@@ -27,7 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.hr_uikit.data.BottomSheet
+import com.example.hr_uikit.presentation.model.BottomSheetData
 import com.example.hr_uikit.presentation.theme.CustomTheme
 import com.example.hr_uikit.presentation.theme.Primary
 import com.example.hr_uikit.presentation.theme.Secondary
@@ -40,19 +40,19 @@ import com.example.hr_uikit.presentation.theme.White
 @Composable
 fun BottomSheet(
     modifier: Modifier = Modifier,
-    listString: List<BottomSheet> = listOf
+    listString: List<BottomSheetData> = listOf
         (
-        BottomSheet("New Applicants", selected = true, id = 0),
-        BottomSheet("New Applicants", selected = false, id = 1),
-        BottomSheet("New Applicants", selected = false, id = 2),
-        BottomSheet("New Applicants", selected = false, id = 3),
-        BottomSheet("New Applicants", selected = false, id = 4),
-        BottomSheet("New Applicants", selected = false, id = 5)
+        BottomSheetData("New Applicants", selected = true, id = 0),
+        BottomSheetData("New Applicants", selected = false, id = 1),
+        BottomSheetData("New Applicants", selected = false, id = 2),
+        BottomSheetData("New Applicants", selected = false, id = 3),
+        BottomSheetData("New Applicants", selected = false, id = 4),
+        BottomSheetData("New Applicants", selected = false, id = 5)
     ),
     onDismissRequest: () -> Unit,
     onClickCancel: () -> Unit = {},
     onClickUpdate: () -> Unit = {},
-    onItemSelected: (BottomSheet) -> Unit,
+    onItemSelected: (BottomSheetData) -> Unit,
 ) {
     Log.i("[BottomSheet]", "Создание - Отрисовка BottomSheet")
 
@@ -129,12 +129,12 @@ private fun BottomSheetPrev() {
         var listState by remember {
             mutableStateOf(
                 listOf(
-                    BottomSheet("New Applicants", selected = true, id = 0),
-                    BottomSheet("New Applicants", selected = false, id = 1),
-                    BottomSheet("New Applicants", selected = false, id = 2),
-                    BottomSheet("New Applicants", selected = false, id = 3),
-                    BottomSheet("New Applicants", selected = false, id = 4),
-                    BottomSheet("New Applicants", selected = false, id = 5)
+                    BottomSheetData("New Applicants", selected = true, id = 0),
+                    BottomSheetData("New Applicants", selected = false, id = 1),
+                    BottomSheetData("New Applicants", selected = false, id = 2),
+                    BottomSheetData("New Applicants", selected = false, id = 3),
+                    BottomSheetData("New Applicants", selected = false, id = 4),
+                    BottomSheetData("New Applicants", selected = false, id = 5)
                 )
             )
         }

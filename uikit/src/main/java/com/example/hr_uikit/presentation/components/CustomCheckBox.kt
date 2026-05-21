@@ -25,7 +25,7 @@ fun CustomCheckBox(
     modifier: Modifier = Modifier,
     enabled: Boolean = false
 ) {
-    Log.i("[CustomCheckBox]", "Создание - Отрисовка CustomCheckBox")
+    Log.i("[CustomCheckBox]", "Создание компонента - Отрисовка CustomCheckBox")
 
     Checkbox(
         modifier = modifier,

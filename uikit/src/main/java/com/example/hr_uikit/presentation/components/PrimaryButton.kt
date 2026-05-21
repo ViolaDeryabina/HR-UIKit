@@ -1,9 +1,11 @@
 package com.example.hr_uikit.presentation.components
 
 import android.util.Log
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.hr_uikit.presentation.theme.CustomTheme
 
 // Назначение: Создание кнопки PrimaryButton для обработки нажатий
@@ -32,8 +34,9 @@ private fun PrimaryButtonPrev() {
     CustomTheme{
         PrimaryButton(
             onClick = {},
-            text = "TExt",
-            enabled = true
+            text = "sadddddddddsdd",
+            enabled = true,
+            modifier = Modifier.width(100.dp)
         )
     }
 }
